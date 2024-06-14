@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cerebri Sans";
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  cursor: none;
+  background-color: #121212;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #dc3545;
+}
+
+.cursor-outline {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(220, 53, 69, 0.3);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* */
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 136px;
+  margin-bottom: 90px;
+  top: 0;
+  left: 0;
+  padding: 0 90px;
+  position: fixed;
+  width: 100%;
+  background-color: #121212;
+  z-index: 99;
+}
+
+.nav .left {
+  display: flex;
+  gap: 143px;
+}
+
+.nav .left img {
+  height: 43px;
+}
+
+.nav .right ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav .right ul li {
+  font-size: 16px;
+  color: #cccccc;
+  font-weight: bold;
+}
+
+.nav .right ul li:first-child {
+  color: #fa4529;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 90px;
+}
+
+.hero .left h1 {
+  font-size: 7.5rem;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.hero .left p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 60px;
+  color: #fff;
+  line-height: 1.625;
+  letter-spacing: -0.025em;
+}
+
+.hero .left svg {
+  margin-top: 156px;
+}
+
+.hero .right {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero .right .image {
+  width: 530px;
+  height: 690px;
+  border-top-left-radius: 46%;
+  border-top-right-radius: 46%;
+  object-fit: cover;
+  object-position: center;
+  background-image: url(https://moonex-nextapp.vercel.app/assets/img/home/dark/home-dark-main-image.jpg);
+  position: relative;
+}
+
+.hero .right .image .circle-image {
+  width: 291px;
+  height: 291px;
+  left: -145.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .right .image .circle-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .right .image .circle-image img.circle {
+  transform: rotate(0deg);
+  animation: spin 10s linear infinite;
+}
+
+.section-3rd {
+  margin-top: 200px;
+  padding: 0 90px;
+}
+
+.section-3rd .row {
+  display: flex;
+  border-top: 1px solid white;
+  justify-content: space-between;
+  padding: 120px 0;
+  color: #cccccc;
+}
+
+.section-3rd .row h2 {
+  font-size: 80px;
+  color: white;
+}
+
+.section-3rd .row p {
+  font-size: 16px;
+}
+
+.section-3rd .row ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-3rd .row ul li {
+  font-size: 48px;
+  font-weight: 400;
+  list-style: none;
+}
+
+.section-3rd .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 120px;
+}
+
+.section-3rd .cards .card {
+  width: 31%;
+  max-width: 33%;
+  display: flex;
+  flex-direction: column;
+  color: #cccccc;
+}
+
+.section-3rd .cards .card * {
+  transition: 0.3s linear;
+}
+
+.section-3rd .cards .card:hover p,
+.section-3rd .cards .card:hover a {
+  color: white;
+}
+
+.section-3rd .cards .card:hover .image-container img {
+  filter: saturate(100%);
+  transition: 0.7s linear;
+  scale: 1.054;
+}
+
+.section-3rd .cards .card .image-container {
+  overflow: hidden;
+  width: 440px;
+  height: 440px;
+}
+
+.section-3rd .cards .card .image-container img {
+  filter: saturate(0%);
+  width: 100%;
+  height: 100%;
+}
+
+.section-3rd .cards .card p {
+  font-size: 18px;
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+.section-3rd .cards .card a {
+  font-size: 28px;
+  text-decoration: none;
+  color: #cccccc;
+}
+
+.section-3rd .row .clients-says {
+  margin-bottom: 80px;
+  color: white;
+}
+
+.section-3rd .row .clients-says-options p {
+  font-size: 24px;
+  color: white;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  background: #121212;
+  width: 100%;
+  padding: 120px 90px;
+  height: 556px;
+  display: flex;
+  flex-direction: column;
+  gap: 136px;
+}
+
+.footer-item {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.item_1 {
+  padding-right: 200px;
+}
+
+.item_2 {
+  display: flex;
+  gap: 118px;
+}
+
+.item_2 a {
+  font-weight: 600;
+}
+
+.item_2_firstPart {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.item_2_secondPart {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.item_3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 161px;
+}
+
+.item_3 h3 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.item_3 p {
+  opacity: 0.4;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding-right: 270px;
+}
+
+.footer-bottom ul {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom ul li i {
+  font-size: 24px;
+}
+
+.footer-bottom h3 {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.paralax {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://moonex-nextapp.vercel.app/assets/img/services-call-to-action-background.png);
+  flex-direction: column;
+  height: 690px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.paralax div h2 {
+  font-size: 36px;
+  color: #fa4529;
+  font-weight: 100;
+}
+
+.paralax div h1 {
+  font-size: 120px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.paralax div h1::after {
+  content: "Call Moonex";
+  color: #fa4529;
+  z-index: 99;
+  position: absolute;
+  width: 0%;
+  overflow: hidden;
+  height: 101%;
+  top: 0;
+  left: 0;
+  transition: 0.2s linear;
+}
+
+.paralax div h1:hover::after {
+  width: 100%;
+}

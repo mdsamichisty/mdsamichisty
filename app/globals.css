@@ -90,6 +90,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 90px;
+  margin-top: 200px;
 }
 
 .hero .left h1 {

@@ -9,6 +9,11 @@ ul li {
   list-style: none;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   height: 100vh;
   cursor: none;
@@ -36,6 +41,7 @@ body {
   border-radius: 50%;
   z-index: 999;
   pointer-events: none;
+  display: block;
 }
 
 /* */
@@ -112,6 +118,49 @@ body {
 
 .hero .left svg {
   margin-top: 156px;
+}
+
+.hero .left {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero .left .image {
+  width: 260px;
+  display: none;
+  height: 360px;
+  border-top-left-radius: 46%;
+  border-top-right-radius: 46%;
+  object-fit: cover;
+  object-position: center;
+  background-image: url(https://moonex-nextapp.vercel.app/assets/img/home/dark/home-dark-main-image.jpg);
+  position: relative;
+  margin-left: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.hero .left .image .circle-image {
+  width: 120px;
+  height: 120px;
+  left: -59px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .left .image .circle-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .left .image .circle-image img.circle {
+  transform: rotate(0deg);
+  animation: spin 10s linear infinite;
 }
 
 .hero .right {
@@ -386,4 +435,157 @@ body {
 
 .paralax div h1:hover::after {
   width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+  .nav {
+    padding: 0 30px;
+    width: 100%;
+  }
+
+  .nav .right {
+    display: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    margin-top: 130px;
+  }
+
+  .hero .left h1 {
+    font-size: 70px;
+  }
+
+  .hero .left p {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  .hero > div {
+    width: 100%;
+  }
+
+  .hero .left svg {
+    margin-top: 20px;
+    width: 60px;
+  }
+
+  .hero .left .image {
+    width: 260px;
+    height: 360px;
+    display: flex;
+  }
+
+  .hero .left .image .circle-image {
+    width: 120px;
+    height: 120px;
+    left: -59px;
+  }
+
+  .hero .right .image {
+    display: none;
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+
+  .section-3rd .row {
+    padding: 40px 0;
+  }
+
+  .section-3rd .row,
+  .section-3rd .row > * {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+  }
+
+  .section-3rd .row > div:first-child {
+    display: flex;
+    flex-direction: row !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 30px;
+  }
+
+  .section-3rd {
+    margin-top: 60px;
+    padding: 0 30px;
+  }
+
+  .section-3rd .cards {
+    padding-bottom: 40px;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 20px;
+  }
+
+  .section-3rd .cards .card .image-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-3rd .cards .card {
+    min-width: 100%;
+    padding-bottom: 40px;
+  }
+
+  .section-3rd .row div .clients-says-options .clients-says {
+    font-size: 18px !important;
+    margin-bottom: 40px;
+  }
+
+  .paralax {
+    height: 340px;
+  }
+
+  .paralax div h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .paralax div svg {
+    width: 60px;
+  }
+
+  .paralax div p {
+    font-size: 28px;
+  }
+
+  .footer {
+    padding: 40px 20px;
+    height: unset;
+    gap: 0;
+  }
+
+  .footer .footer-item {
+    flex-direction: column;
+  }
+
+  .footer .footer-item > div {
+    padding-right: 0;
+  }
+
+  .footer .footer-item .item_2 {
+    margin: 40px 0;
+  }
+
+  .footer .footer-item .item_3 {
+    text-align: center;
+  }
+
+  .footer .footer-bottom {
+    margin-top: 60px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
 }

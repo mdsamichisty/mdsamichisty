@@ -31,6 +31,19 @@ export default function Home() {
               Bigger, <br />
               Bolder and <br /> Better
             </h1>
+            <div className="image">
+              <div className="circle-image">
+                <img
+                  className="circle"
+                  src="https://moonex-nextapp.vercel.app/_next/image?url=%2Fassets%2Fimg%2Froot%2Fhome-dark%2Fcircle-text.png&w=1200&q=75"
+                  alt=""
+                />
+                <img
+                  src="https://moonex-nextapp.vercel.app/_next/image?url=%2Fassets%2Fimg%2Froot%2Fhome-dark%2Fcircle-logo.png&w=1200&q=75"
+                  alt=""
+                />
+              </div>
+            </div>
             <p>
               We’re from Poland, we passioned with the space & <br /> create the
               values vsustainable over time.
@@ -82,6 +95,7 @@ export default function Home() {
                 width: "50%",
                 display: "flex",
                 justifyContent: "space-between",
+                gap: "20px",
               }}
             >
               <ul>
@@ -192,6 +206,7 @@ export default function Home() {
                 width: "50%",
                 display: "flex",
                 justifyContent: "space-between",
+                gap: "20px",
               }}
             >
               <ul>

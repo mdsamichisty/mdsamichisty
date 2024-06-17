@@ -14,10 +14,22 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+  z-index: 99;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fa4529;
+  z-index: 99;
+}
+
 body {
   height: 100vh;
   cursor: none;
   background-color: #121212;
+  position: relative;
 }
 
 .cursor-dot {
@@ -49,6 +61,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .nav {
@@ -61,7 +74,7 @@ body {
   left: 0;
   padding: 0 90px;
   position: fixed;
-  width: 100%;
+  width: 99%;
   background-color: #121212;
   z-index: 99;
 }
@@ -73,6 +86,7 @@ body {
 
 .nav .left img {
   height: 43px;
+  cursor: pointer;
 }
 
 .nav .right ul {
@@ -86,6 +100,7 @@ body {
   font-size: 16px;
   color: #cccccc;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .nav .right ul li:first-child {
@@ -167,6 +182,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .hero .right .image {
   width: 530px;
   height: 690px;
@@ -232,6 +248,7 @@ body {
 .section-3rd .row ul li {
   font-size: 48px;
   font-weight: 400;
+  cursor: pointer;
   list-style: none;
 }
 
@@ -440,7 +457,7 @@ body {
 @media only screen and (max-width: 400px) {
   .nav {
     padding: 0 30px;
-    width: 100%;
+    width: 97%;
   }
 
   .nav .right {
@@ -589,3 +606,5 @@ body {
     padding-right: 0;
   }
 }
+
+/* Frost Slayer */

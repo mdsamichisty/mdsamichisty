@@ -403,6 +403,7 @@ body {
 
 .footer-bottom ul li i {
   font-size: 24px;
+  cursor: pointer;
 }
 
 .footer-bottom h3 {
